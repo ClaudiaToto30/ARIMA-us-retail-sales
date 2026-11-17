@@ -10,19 +10,23 @@ ARIMA forecasting of U.S. monthly retail sales (FRED MRTSSM44000USN) - Business 
 ## Analysis
 **Part 1 - Non-seasonal ARIMA (annual sales, 1992-2025)**
 - Trend analysis and differencing (`ndiffs`, `diff`)
-- Model selection with `auto.arima`
+- Model selection with `auto.arima` and explanation of the output
 - Actual vs. fitted values (red line)
 - 5-year forecast with a 99.5% prediction interval
 - Residual analysis (ACF, Ljung-Box test, histogram, `tsdiag`)
+- Model accuracy (`accuracy`: ME, RMSE, MAE, MAPE, MASE)
 
 **Part 2 - Seasonal ARIMA (monthly sales)**
 - Seasonal and regular differencing (`nsdiffs`, `ndiffs`, lag 12)
-- Selected model: **ARIMA(4,1,0)(0,1,1)[12]**
-- Actual vs. fitted values (red line)
+- Selected model: **ARIMA(4,1,0)(0,1,1)[12]** and explanation of the output
 - Residual analysis (ACF, Ljung-Box test, histogram, `tsdiag`)
+- Actual vs. fitted values (red line)
+- Forecast for the next five periods (August - December 2026) with a 99.5% prediction interval
+- Model accuracy (`accuracy`: ME, RMSE, MAE, MAPE, MASE)
 
 ## Files
 | File | Description |
 |---|---|
-| `ARIMA_MRTSSM44000USN.Rmd` | R Markdown code with explanations |
-| `ARIMA_MRTSSM44000USN.html` | Knitted report with all plots |
+| `ARIMA_MRTSSM44000USN.Rmd` | R Markdown source code with explanations of every output and plot |
+| `ARIMA_MRTSSM44000USN.html` | Knitted report with all results and plots |
+| `MRTSSM44000USN.xlsx` | Monthly retail sales dataset downloaded from FRED |
